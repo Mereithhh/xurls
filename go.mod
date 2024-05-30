@@ -1,4 +1,4 @@
-module mvdan.cc/xurls/v2
+module github.com/mereithhh/xurls
 
 go 1.21
 

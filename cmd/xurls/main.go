@@ -21,7 +21,7 @@ import (
 
 	"golang.org/x/mod/module"
 
-	"mvdan.cc/xurls/v2"
+	"github.com/mereithhh/xurls"
 )
 
 var (
