@@ -162,7 +162,7 @@ func relaxedExp() string {
 	tlds := `(?:(?i)` + punycode + `|` + anyOf(append(asciiTLDs, PseudoTLDs...)...) + `\b|` + anyOf(unicodeTLDs...) + `)`
 	domain := subdomain + tlds
 
-	hostName := `(?:` + domain + `|\[` + ipv6Addr + `\]|\b` + ipv4Addr + `\b)`
+	hostName := `(?:[a-zA-Z0-9]` + domain + `|\[` + ipv6Addr + `\]|\b` + ipv4Addr + `\b)`
 	webURL := hostName + port + `(?:/` + pathCont + `|/)?`
 	email := `(?P<relaxedEmail>[a-zA-Z0-9._%\-+]+@` + domain + `)`
 	return strictExp() + `|` + webURL + `|` + email + `|` + ipv6AddrMinusEmpty
