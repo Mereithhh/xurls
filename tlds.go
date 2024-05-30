@@ -613,7 +613,6 @@ var TLDs = []string{
 	`itau`,
 	`itv`,
 	`jaguar`,
-	`java`,
 	`jcb`,
 	`je`,
 	`jeep`,

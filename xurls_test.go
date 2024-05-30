@@ -475,3 +475,15 @@ func TestJoTest(t *testing.T) {
 	s := re.FindAllString("很抱歉，我无法访问外部网站，包括www.niubi666.com。如果您有任何问题或需要帮助，请告诉我，我会尽力在不违反任何规定的情况下提供帮助。如果您需要关于某个话题的信息或者有其他问题，请随时告诉我。", -1)
 	fmt.Println(s)
 }
+
+func testBug(t string) {
+	re := Relaxed()
+	s := re.FindAllString(t, -1)
+	fmt.Println(s)
+}
+
+func TestTextV2(t *testing.T) {
+	testBug("e::")
+	testBug("::c")
+	testBug("FileSystem.Java:3281")
+}
