@@ -163,7 +163,7 @@ func relaxedExp() string {
 	domain := subdomain + tlds
 
 	hostName := `(?:[a-zA-Z0-9]` + domain + `\b)`
-	webURL := hostName + `(?:/` + pathCont + `|/)?`
+	webURL := hostName
 	return webURL
 }
 

@@ -483,6 +483,6 @@ func testBug(t string) {
 }
 
 func TestTextV2(t *testing.T) {
-	testBug("https://feijisu1.com和feijisu6.com")
+	testBug("https://feijisu1.com和feijisu6.co/?adsfasdf=1")
 
 }
