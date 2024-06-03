@@ -483,7 +483,6 @@ func testBug(t string) {
 }
 
 func TestTextV2(t *testing.T) {
-	testBug("e::")
-	testBug("::c")
-	testBug("FileSystem.Java:3281")
+	testBug("https://feijisu1.com和feijisu6.com")
+
 }

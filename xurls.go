@@ -162,9 +162,9 @@ func relaxedExp() string {
 	tlds := `(?:(?i)` + punycode + `|` + anyOf(append(asciiTLDs, PseudoTLDs...)...) + `\b|` + anyOf(unicodeTLDs...) + `)`
 	domain := subdomain + tlds
 
-	hostName := `(?:[a-zA-Z0-9]` + domain + `|\[` + ipv6Addr + `\]|\b` + ipv4Addr + `\b)`
+	hostName := `(?:[a-zA-Z0-9]` + domain + `\b)`
 	webURL := hostName + `(?:/` + pathCont + `|/)?`
-	return strictExp() + `|` + webURL
+	return webURL
 }
 
 // Strict produces a regexp that matches any URL with a scheme in either the
